@@ -1,0 +1,4 @@
+requests
+matterhook
+python-telegram-bot
+discord-webhook
