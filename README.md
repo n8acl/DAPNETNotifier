@@ -45,15 +45,4 @@ If you reach out to me and have an error, please include what error you are gett
 ---
 
 ## Change Log
-* 03/28/2022 - Release 03282022
-  * Refined query to check destination channel versus the destination extension. When using a ring group, this helps to grab the missed call to the extension
-  * Added the ability to check for and notify if a new voicemail has been left. Also lets the user know the number of voicemails sitting in the inbox for that extension. This is total number, not just new voicemails.
-
-* 01/30/2022 - Release 01302022
-  * Added more supported messaging services for notifications
-  * Refined the SQL query that pulls the last call data
-  * Refined the way the script parses the data for missed call
-  * Added Installation steps document
-  * Added startbot.sh as an example to allow for launch at startup.
-
-* 01/29/2022 - Inital Release
+* 03/28/2022 - Inital Release
