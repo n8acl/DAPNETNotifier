@@ -27,7 +27,7 @@ This script will push a notification to the following services:
 
 ## Installation/Setup Instructions
 
-[Click here to see the installation and setup steps](https://github.com/n8acl/freepbx_call_monitor/blob/main/Installation-Setup.md). Then come back here. This is a bit of a long document, so read it all carefully.
+[Click here to see the installation and setup steps](https://github.com/n8acl/DAPNETNotifier/blob/master/Installation-Setup.md). Then come back here. This is a bit of a long document, so read it all carefully.
 
 ---
 ## Contact
