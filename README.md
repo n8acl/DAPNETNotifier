@@ -5,7 +5,7 @@ Forward DAPNET messages to notification services
 
 ###### Forked from [KR0SIV/DAPNET2APRS](https://github.com/KR0SIV/DAPNET2APRS) and modified.
 
-This Python script will scrape your PI-Star Dashboard and forward any new DAPNET Messages you the nofication service of your choice (from the one listed below of course).
+This Python script will scrape your PI-Star Dashboard and forward any new DAPNET Messages you receive to the notification service of your choice (from the one listed below of course).
 
 The original script scraped the dashboard and forwarded any messages to APRS for notitfication as a message there. I modified the script to send it to services that could be used on a phone.
 
@@ -45,4 +45,7 @@ If you reach out to me and have an error, please include what error you are gett
 ---
 
 ## Change Log
+
+* 05/30/2022 - Fixed some README.md spelling errors.
+
 * 03/28/2022 - Inital Release
