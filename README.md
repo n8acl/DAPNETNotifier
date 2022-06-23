@@ -11,6 +11,8 @@ The original script scraped the dashboard and forwarded any messages to APRS for
 
 This script does require you to have a Pi-Star Hotspot/repeater setup and configured as a transmitter for DAPNET. Otherwise there is nothing to scrape. Future versions will hopefully use the DAPNET API to pull calls from. This should NOT be run on your hotpost, but can be run on a Linux Server or a Raspberry Pi.
 
+This will work with the standard Pi-Star Dashboard as well as the [W0CHP-PiStar-Dash Dashboard](https://w0chp.net/w0chp-pistar-dash/)
+
 ---
 
 ## Supported Services
