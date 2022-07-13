@@ -1,22 +1,19 @@
-name: GitlabSync
+name: Mirror and run GitLab CI
 
-on:
-  - push
-  - delete
+on: [push]
 
 jobs:
-  sync:
+  build:
     runs-on: ubuntu-latest
-    name: Git Repo Sync
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
+    - name: Mirror + trigger CI
+      uses: SvanBoxel/gitlab-mirror-and-ci-action@master
       with:
-        fetch-depth: 0
-    - uses: wangchucheng/git-repo-sync@v0.1.0
-      with:
-        # Such as https://github.com/wangchucheng/git-repo-sync.git
-        target-url: ${{ secrets.TARGET_URL }}
-        # Such as wangchucheng
-        target-username: ${{ secrets.TARGET_USERNAME }}
-          # You can store token in your project's 'Setting > Secrets' and reference the name here. Such as ${{ secrets.ACCESS\_TOKEN }}
-        target-token: ${{ secrets.TARGET_TOKEN }}
+        args: "https://gitlab.com/n8acl/DAPNETNotifier"
+      env:
+        GITLAB_HOSTNAME: "gitlab.com"
+        GITLAB_USERNAME: "svboxel"
+        GITLAB_PASSWORD: ${{ secrets.GITLAB_PASSWORD }} // Generate here: https://gitlab.com/profile/personal_access_tokens
+        GITLAB_PROJECT_ID: "37776872" // https://gitlab.com/<namespace>/<repository>/edit
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} // https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
