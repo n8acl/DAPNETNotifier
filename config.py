@@ -1,6 +1,9 @@
 ##### Main Variables
-mmdvm_ip = 'FQDN or full IP Address for pi-star hotspot' # EX: http://pistar.local or http://10.0.0.100
-wait_time = 60 #Your delay in seconds between message checks, let's not hammer the crap out of the MMDVM hum?
+wait_time = 60 #Your delay in seconds between message checks, let's not hammer the crap out of the API hum? Note: DO not set this less then 60. Once a minute is plenty. 
+
+# Configure Dapnet
+dapnet_username = 'DAPNET USERNAME HERE'
+dapnet_password = 'DAPNET PASSWORD HERE'
 
 ##### Notification Services Variables
 # Pushover configuration

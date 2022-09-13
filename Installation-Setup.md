@@ -4,8 +4,6 @@
 3) [Configure the script](Installation-Setup.md#configure-the-script)
 4) [Run the Script](Installation-Setup.md#running-the-script)
 
-**NOTE: This should NOT be installed on your PI-Star Hotspot. Please use another machine for this script.**
-
 ---
 
 ### Messaging Services
@@ -88,7 +86,7 @@ The next step is installing the needed packages, cloning the repo to get the scr
 
 This is probably the easiest step to accomplish.
 
-Please run the following commands on your FreePBX Server:
+Please run the following commands on your server:
 
 ```bash
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
@@ -111,8 +109,11 @@ You will need to edit the config.py file in the cloned directory. Open this file
 
 ```python
 ##### Main Variables
-mmdvm_ip = 'FQDN or full IP Address for pi-star hotspot' # EX: http://pistar.local or http://10.0.0.100
-wait_time = 60 #Your delay in seconds between message checks, let's not hammer the crap out of the MMDVM hum?
+wait_time = 60 #Your delay in seconds between message checks, let's not hammer the crap out of the API hum? Note: DO not set this less then 60. Once a minute is plenty. 
+
+# Configure Dapnet
+dapnet_username = 'DAPNET USERNAME HERE'
+dapnet_password = 'DAPNET PASSWORD HERE'
 
 ##### Notification Services Variables
 # Pushover configuration
@@ -139,9 +140,9 @@ discord_wh = 'DISCORD CHANNEL WEBHOOK HERE'
 ```
 At the very top, you will see some settings that are general settings for the script. These variables are:
 
-- ```mmdvm_ip``` this is either the Fully Qualified Domain Name (FQDN) or the IP address of your PI-Star Hotspot. This does require ```http://``` or ```https://``` to work.
-  - Example: http://pistar.local or http://10.0.0.1
-- ```wait_time``` time in seconds to wait to check the dashboard. Remember, be kind to your hotspot. 
+- ```wait_time``` time in seconds to wait to check the API. Remember, be kind to the API. One thing to note. Don't set this less then 60 otherwise. Once a minute is plenty. ou can set it higher for less often checks, but less then will just default it to 60 Seconds.
+
+You have to also enter your DAPNET Username and password here as well. Otherwise you will not be able to access the DAPNET API.
 
 Each section below that contains what is needed for each service to operate. To enable sending to a service, you will need to set the service name from ```False``` to ```True``` and supply the needed keys/webhooks for that service.
 

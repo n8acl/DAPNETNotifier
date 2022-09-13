@@ -3,15 +3,9 @@ Forward DAPNET messages to notification services
 
 ---
 
-###### Forked from [KR0SIV/DAPNET2APRS](https://github.com/KR0SIV/DAPNET2APRS) and modified.
+This Python script will poll the DAPNET API and forward any new DAPNET Messages you receive to the notification service of your choice (from the one listed below of course).
 
-This Python script will scrape your PI-Star Dashboard and forward any new DAPNET Messages you receive to the notification service of your choice (from the one listed below of course).
-
-The original script scraped the dashboard and forwarded any messages to APRS for notitfication as a message there. I modified the script to send it to services that could be used on a phone.
-
-This script does require you to have a Pi-Star Hotspot/repeater setup and configured as a transmitter for DAPNET. Otherwise there is nothing to scrape. Future versions will hopefully use the DAPNET API to pull calls from. This should NOT be run on your hotpost, but can be run on a Linux Server or a Raspberry Pi.
-
-This will work with the standard Pi-Star Dashboard as well as the [W0CHP-PiStar-Dash Dashboard](https://w0chp.net/w0chp-pistar-dash/)
+The original script this was based off of scraped the Pi-Star dashboard and forwarded any messages to APRS for notitfication as a message there. I modified the script to send it to services that could be used on a phone and instead of scraping the dashboard, it utilizes the DAPNET API.
 
 ---
 
@@ -45,8 +39,15 @@ Or open an issue on Github. I will respond to it, and of course you, when I can.
 If you reach out to me and have an error, please include what error you are getting and what you were doing. I may also ask you to send me certain files to look at. Otherwise just reach out to me :).
 
 ---
+## Credits
+
+Thanks go to [Leroy, KD8BXP](https://github.com/kd8bxp) for pointing out a DAPNET API endpoint I missed in my research that would let me pull this data directly from there.
+
+---
 
 ## Change Log
+
+* 09/13/2022 - Updated Script to pull from the DAPNET API versus Scrapeing the Pi-Star Dashboard
 
 * 05/30/2022 - Fixed some README.md spelling errors.
 
