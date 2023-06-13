@@ -29,8 +29,7 @@ This script will push a notification to the following services:
 ## Contact
 If you have questions, please feel free to reach out to me. You can reach me in one of the following ways:
 
-- Twitter: @n8acl
-- Discord: Ravendos#7364
+- Discord: Ravendos
 - Mastodon: @n8acl@mastodon.radio
 - E-mail: n8acl@qsl.net
 
